@@ -1,4 +1,19 @@
-.crystal-image {
-    width: 100px;
-    height: 100px;
+.crystal.image {
+    width: 70px;
+    height: 70px;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 40px;
+    background-color: teal;
+    color: white;
+    text-align: center
+}
+
+p {
+    font-family: Arial;
+    font-size: 20px;
+    color: purple;
+    text-align: center;
 }
