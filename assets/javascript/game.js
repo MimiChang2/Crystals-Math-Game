@@ -15,11 +15,11 @@ function resetGame() {
         Math.floor(Math.random() * 11) + 1
     ];
     for(var i = 0; i < numberOptions.length; i++) {
+        var imageCrystal = $("#crystal" + (i + 1));
         // Each imageCrystal given data attribute (data-crystalValue) equal to array value.
         imageCrystal.attr("data-crystalvalue", numberOptions[i]);
 
-        // Each attribute added to page.
-        $("#crystals").append(imageCrystal);
+
     }
 
     counter = 0;
@@ -45,15 +45,12 @@ var numberOptions = [Math.floor(Math.random() * 11) + 1,
 for(var i = 0; i < numberOptions.length; i++) {
 
     // For each iteration, create an imageCrystal
-    var imageCrystal = $("#crystal" + (i + 1))
+    var imageCrystal = $("#crystal" + (i + 1));
 
 
     // Each imageCrystal given data attribute (data-crystalValue) equal to array value.
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
 
-
-    // Each crystal image with attributes added to page.
-    $("#crystals").append(imageCrystal);
 }
 
 // Click event applies to every crystal.
