@@ -1,7 +1,23 @@
-.crystals {
-    width: 70px;
-    height: 70px;
+#crystal1 {
+    width: 140px;
+    height: 140px;
 }
+
+#crystal2 {
+    width: 140px;
+    height: 140px;
+}
+
+#crystal3 {
+    width: 140px;
+    height: 140px;
+}
+
+#crystal4 {
+    width: 140px;
+    height: 140px;
+}
+
 
 h1 {
     font-family: Arial;

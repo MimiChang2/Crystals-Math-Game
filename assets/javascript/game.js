@@ -45,13 +45,7 @@ var numberOptions = [Math.floor(Math.random() * 11) + 1,
 for(var i = 0; i < numberOptions.length; i++) {
 
     // For each iteration, create an imageCrystal
-    var imageCrystal = $("<img>");
-
-    imageCrystal.addClass("crystal-image");
-
-
-    // Each imageCrystal link to the crystal image
-    imageCrystal.attr("src", "assets/images/amethyst.png");
+    var imageCrystal = $("#crystal" + (i + 1))
 
 
     // Each imageCrystal given data attribute (data-crystalValue) equal to array value.
@@ -63,7 +57,7 @@ for(var i = 0; i < numberOptions.length; i++) {
 }
 
 // Click event applies to every crystal.
-$(".crystal-image").on("click", function() {
+$(".crystal").on("click", function() {
 
     // Extract crystal value from the data attribute.
     // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
