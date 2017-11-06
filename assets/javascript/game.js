@@ -7,14 +7,26 @@ var counter = 0;
 
 function resetGame() {
     targetNumber = Math.floor(Math.random() * 101) + 19;
+    $("#number").text(targetNumber);
 
     numberOptions = [Math.floor(Math.random() * 11) + 1,
         Math.floor(Math.random() * 11) + 1,
         Math.floor(Math.random() * 11) + 1,
         Math.floor(Math.random() * 11) + 1
     ];
+    for(var i = 0; i < numberOptions.length; i++) {
+        // Each imageCrystal given data attribute (data-crystalValue) equal to array value.
+        imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+
+        // Each attribute added to page.
+        $("#crystals").append(imageCrystal);
+    }
 
     counter = 0;
+    $("#score").text("Score: " + counter);
+
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
 
 }
 
@@ -38,12 +50,11 @@ for(var i = 0; i < numberOptions.length; i++) {
     imageCrystal.addClass("crystal-image");
 
 
-    // Each imageCrystal will be given a src link to the crystal image
+    // Each imageCrystal link to the crystal image
     imageCrystal.attr("src", "assets/images/amethyst.png");
 
 
-    // Each imageCrystal given data attribute called data-crystalValue.
-    // This data attribute will be set equal to the array value.
+    // Each imageCrystal given data attribute (data-crystalValue) equal to array value.
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
 
 
@@ -67,7 +78,7 @@ $(".crystal-image").on("click", function() {
     counter += crystalValue;
 
     // Win-lose logic
-    alert("New score: " + counter);
+    $("#score").text("Score: " + counter);
 
     if(counter === targetNumber) {
         alert("You win!");
